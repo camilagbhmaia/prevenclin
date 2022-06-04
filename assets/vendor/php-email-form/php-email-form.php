@@ -500,9 +500,9 @@ class PHPMailer
      * Either a single hostname or multiple semicolon-delimited hostnames.
      * You can also specify a different port
      * for each host by using this format: [hostname:port]
-     * (e.g. "smtp1.example.com:25;smtp2.example.com").
+     * (e.g. "smtp.yandex.com:465").
      * You can also specify encryption type, for example:
-     * (e.g. "tls://smtp1.example.com:587;ssl://smtp2.example.com:465").
+     * (e.g. "tls://smtp.yandex.com:465;ssl").
      * Hosts will be tried in order.
      *
      * @var string
@@ -727,7 +727,7 @@ class PHPMailer
     /**
      * DKIM signing domain name.
      *
-     * @example 'example.com'
+     * @example 'prevenclin.com.br'
      *
      * @var string
      */
