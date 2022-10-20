@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #3291e6;
+  color: #154854;
   text-decoration: none;
 }
 
@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #298ce5;
+  background: #154854;
   color: #fff;
 }
 .back-to-top.active {
@@ -440,7 +440,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #96cfbe;
 }
 #hero .btn-get-started:hover {
-  background: #3291e6;
+  background: #154854;
 }
 @media (min-width: 1024px) {
   #hero {
