@@ -731,7 +731,7 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(21, 72, 84);
+  border: 5px solid rgba(21, 72, 84, 52%);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
