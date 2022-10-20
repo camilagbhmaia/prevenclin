@@ -632,7 +632,7 @@ section {
 --------------------------------------------------------------*/
 .about .icon-boxes h4 {
   font-size: 18px;
-  color: #4b7dab;
+  color: #154854;
   margin-bottom: 15px;
 }
 .about .icon-boxes h3 {
@@ -692,7 +692,7 @@ section {
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#96cfbe 50%, rgba(25, 119, 204, 0.4) 52%);
+  background: radial-gradient(#96cfbe 50%, rgba(21, 72, 84) 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
