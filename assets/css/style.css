@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
 }
 .appointment-btn:hover {
-  background: #166ab5;
+  background: #154854;
   color: #fff;
 }
 @media (max-width: 768px) {
@@ -1285,7 +1285,7 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  background: #d6e9fa;
+  background: #d9d9d9;
   display: flex;
   justify-content: center;
   align-items: center;
