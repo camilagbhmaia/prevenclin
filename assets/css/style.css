@@ -1138,7 +1138,7 @@ section {
   position: absolute;
   right: 0;
   left: 20px;
-  color: #76b5ee;
+  color: #154854;
 }
 .faq .faq-list .icon-show, .faq .faq-list .icon-close {
   font-size: 24px;
@@ -1303,7 +1303,7 @@ section {
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #4b7dab;
+  color: #154854;
 }
 .contact .info .email, .contact .info .phone {
   margin-top: 40px;
@@ -1481,7 +1481,7 @@ section {
   position: relative;
   border-radius: 50px;
   text-align: left;
-  border: 1px solid #bfdcf7;
+  border: 1px solid #d9d9d9;
 }
 #footer .footer-newsletter form input[type=email] {
   border: 0;
