@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #96cfbe;
-  border-top-color: #d1e6f9;
+  border-top-color: #d9d9d9;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -1089,7 +1089,7 @@ section {
   border-radius: 50px;
   width: 32px;
   height: 32px;
-  background: #a0bcd5;
+  background: #154854;
 }
 .doctors .member .social a i {
   color: #fff;
