@@ -1376,7 +1376,7 @@ section {
   border-radius: 50px;
 }
 .contact .php-email-form button[type=submit]:hover {
-  background: #1c84e3;
+  background: #154854;
 }
 @-webkit-keyframes animate-loading {
   0% {
@@ -1442,7 +1442,7 @@ section {
 }
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #1c84e3;
+  color: #154854;
   font-size: 18px;
   line-height: 1;
 }
