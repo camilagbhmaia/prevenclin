@@ -690,7 +690,7 @@ section {
   min-height: 500px;
 
   .about .video-box2 {
-    background: url("../img/Diagnostico.jpg") center center no-repeat;
+    background: url("../img/diagnostico.jpg") center center no-repeat;
     background-size: cover;
     min-height: 500px;
 }
