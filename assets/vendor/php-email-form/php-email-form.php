@@ -514,7 +514,7 @@ class PHPMailer
      *
      * @var int
      */
-    public $Port = 25;
+    public $Port = 465;
 
     /**
      * The SMTP HELO/EHLO name used for the SMTP connection.
@@ -560,21 +560,21 @@ class PHPMailer
      *
      * @var array
      */
-    public $SMTPOptions = [];
+    public $SMTPOptions = [smtp.yandex.com];
 
     /**
      * SMTP username.
      *
      * @var string
      */
-    public $Username = '';
+    public $Username = 'contato@prevenclin.com.br';
 
     /**
      * SMTP password.
      *
      * @var string
      */
-    public $Password = '';
+    public $Password = 'Luisb1965$';
 
     /**
      * SMTP auth type.
@@ -582,7 +582,7 @@ class PHPMailer
      *
      * @var string
      */
-    public $AuthType = '';
+    public $AuthType = 'LOGIN';
 
     /**
      * An instance of the PHPMailer OAuth class.
