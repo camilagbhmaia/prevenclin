@@ -799,8 +799,7 @@
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form id="contact-form" role="form" class="php-email-form">
+            <form id="contact-form" action="#" method="POST" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Nome" required>
@@ -813,7 +812,7 @@
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Mensagem" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Enviando...</div>
@@ -827,7 +826,7 @@
  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
  <script type="text/javascript">
    (function(){
-     emailjs.init("service_n1733oo"); // Substitua YOUR_USER_ID pelo seu ID de usuário do EmailJS
+     emailjs.init("service_3g3w3wc"); // Substitua YOUR_USER_ID pelo seu ID de usuário do EmailJS
    })();
  </script>
 
