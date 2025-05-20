@@ -831,9 +831,7 @@
       publicKey: "WiHA-5Hk5vw51sfT-"
     });
   })();
-</script>
 
-<script type="text/javascript">
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
     event.stopImmediatePropagation(); // <- Isso impede scripts paralelos de interferir
@@ -846,6 +844,11 @@
     var subject = document.getElementById('subject').value;
     var message = document.getElementById('message').value;
 
+    if (!email.includes("@")) {
+      alert("E-mail inválido.");
+      document.querySelector('.loading').style.display = 'none';
+    return;
+    }
     var templateParams = {
       from_name: name,
       from_email: email,
