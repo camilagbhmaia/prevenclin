@@ -827,29 +827,36 @@
 
 <script type="text/javascript">
   (function(){
-    emailjs.init({
-      publicKey: "WiHA-5Hk5vw51sfT-"
-    });
+    emailjs.init({ publicKey: "WiHA-5Hk5vw51sfT-" });
   })();
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    event.stopImmediatePropagation(); // <- Isso impede scripts paralelos de interferir
+    event.stopImmediatePropagation();
+
+    const form = this;
+
+    // Verifica se todos os campos são válidos
+    if (!form.checkValidity()) {
+      form.reportValidity(); // Mostra mensagens nativas de erro do navegador
+      return;
+    }
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    if (!email.includes("@")) {
+      alert("E-mail inválido.");
+      return;
+    }
+
     document.querySelector('.loading').style.display = 'block';
     document.querySelector('.sent-message').style.display = 'none';
     document.querySelector('.error-message').style.display = 'none';
 
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var subject = document.getElementById('subject').value;
-    var message = document.getElementById('message').value;
-
-    if (!email.includes("@")) {
-      alert("E-mail inválido.");
-      document.querySelector('.loading').style.display = 'none';
-    return;
-    }
-    var templateParams = {
+    const templateParams = {
       from_name: name,
       from_email: email,
       subject: subject,
@@ -861,6 +868,7 @@
         console.log('SUCCESS!', response.status, response.text);
         document.querySelector('.loading').style.display = 'none';
         document.querySelector('.sent-message').style.display = 'block';
+        form.reset();
       }, function(error) {
         console.error('FAILED...', error);
         document.querySelector('.loading').style.display = 'none';
