@@ -822,51 +822,49 @@
               <div class="text-center"><button type="submit">Enviar</button></div>
             </form>
           
- <!-- EmailJS SDK -->
- <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
- <script type="text/javascript">
-   (function(){
-     emailjs.init("WiHA-5Hk5vw51sfT-"); // Substitua YOUR_USER_ID pelo seu ID de usuário do EmailJS
-   })();
- </script>
+ <!-- EmailJS SDK versão 4 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
- <!-- Script para enviar o formulário -->
- <script type="text/javascript">
-   document.getElementById('contact-form').addEventListener('submit', function(event) {
-     event.preventDefault();
+<script type="text/javascript">
+  (function(){
+    emailjs.init({
+      publicKey: "WiHA-5Hk5vw51sfT-"
+    });
+  })();
+</script>
 
-     // Mudar o texto de status
-     document.querySelector('.loading').style.display = 'block';
-     document.querySelector('.sent-message').style.display = 'none';
-     document.querySelector('.error-message').style.display = 'none';
+<script type="text/javascript">
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-     // Obter os valores do formulário
-     var name = document.getElementById('name').value;
-     var email = document.getElementById('email').value;
-     var subject = document.getElementById('subject').value;
-     var message = document.getElementById('message').value;
+    document.querySelector('.loading').style.display = 'block';
+    document.querySelector('.sent-message').style.display = 'none';
+    document.querySelector('.error-message').style.display = 'none';
 
-     // Definir os parâmetros do template
-     var templateParams = {
-       from_name: name,
-       from_email: email,
-       subject: subject,
-       message: message
-     };
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var subject = document.getElementById('subject').value;
+    var message = document.getElementById('message').value;
 
-     emailjs.send('service_3g3w3wc', 'template_3m9t63m', templateParams) // Substitua YOUR_TEMPLATE_ID pelo seu ID do template do EmailJS
-       .then(function(response) {
-         console.log('SUCCESS!', response.status, response.text);
-         document.querySelector('.loading').style.display = 'none';
-         document.querySelector('.sent-message').style.display = 'block';
-       }, function(error) {
-         console.log('FAILED...', error);
-         document.querySelector('.loading').style.display = 'none';
-         document.querySelector('.error-message').style.display = 'block';
-       });
-   });
- </script>
-            
+    var templateParams = {
+      from_name: name,
+      from_email: email,
+      subject: subject,
+      message: message
+    };
+
+    emailjs.send('service_3g3w3wc', 'template_3m9t63m', templateParams)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        document.querySelector('.loading').style.display = 'none';
+        document.querySelector('.sent-message').style.display = 'block';
+      }, function(error) {
+        console.error('FAILED...', error);
+        document.querySelector('.loading').style.display = 'none';
+        document.querySelector('.error-message').style.display = 'block';
+      });
+  });
+</script>          
 
           </div>
 
